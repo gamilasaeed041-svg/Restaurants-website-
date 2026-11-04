@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}المنيو | كرانشي شاورما{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <h1>المنيو</h1>
+  <p>كل الأسعار بالجنيه المصري.</p>
+</section>
+
+<div class="wrap menu-page">
+  {% for cat in menu %}
+  <section class="menu-section">
+    <h2>{{ cat.category }}</h2>
+    <ul class="dishes">
+      {% for item in cat['items'] %}
+      <li class="dish">
+        <span class="dish-icon" aria-hidden="true">{{ item.icon }}</span>
+        <div class="dish-body">
+          <div class="dish-line">
+            <h3>{{ item.name }}</h3><span class="leader"></span><span class="price">{{ item.price }} ج.م</span>
+          </div>
+          {% if item.desc %}<p>{{ item.desc }}</p>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

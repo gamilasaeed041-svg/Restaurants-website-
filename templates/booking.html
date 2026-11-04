@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}حجز طاولة | كرانشي شاورما{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <h1>حجز طاولة</h1>
+  <p>قولنا هتيجي إمتى وكام فرد، وهنأكد معاك بالموبايل.</p>
+</section>
+
+<div class="wrap narrow">
+  {% if sent %}
+  <div class="notice notice-ok" role="status">
+    <h2>وصلنا طلبك يا {{ sent.name }}</h2>
+    <p>هنكلمك على {{ sent.phone }} نأكد الحجز.</p>
+    <a class="btn btn-dark" href="{{ url_for('menu') }}">شوف المنيو</a>
+  </div>
+  {% else %}
+  {% if error %}<div class="notice notice-error" role="alert">{{ error }}</div>{% endif %}
+
+  <form class="form" method="post" action="{{ url_for('booking') }}">
+    <label for="name">الاسم</label>
+    <input id="name" name="name" type="text" autocomplete="name" required>
+
+    <label for="phone">رقم الموبايل</label>
+    <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+
+    <div class="row">
+      <div>
+        <label for="date">التاريخ</label>
+        <input id="date" name="date" type="date" required>
+      </div>
+      <div>
+        <label for="time">الوقت</label>
+        <input id="time" name="time" type="time" required>
+      </div>
+    </div>
+
+    <label for="guests">عدد الأفراد</label>
+    <input id="guests" name="guests" type="number" min="1" max="20" value="2" required>
+
+    <label for="notes">ملاحظات (اختياري)</label>
+    <textarea id="notes" name="notes" rows="3"></textarea>
+
+    <button class="btn btn-red" type="submit">احجز الطاولة</button>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const d = document.getElementById("date");
+  if (d) d.min = new Date().toISOString().split("T")[0];
+</script>
+{% endblock %}

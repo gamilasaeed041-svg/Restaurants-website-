@@ -1,0 +1,252 @@
+/* ========== الألوان والخطوط ========== */
+:root {
+  --sign: #FFC72C;
+  --chili: #BF2A1D;
+  --garlic: #FFF6E0;
+  --char: #2A1912;
+  --ash: #6B5A50;
+  --focus: var(--char);
+
+  --font-display: "Lalezar", "Tajawal", sans-serif;
+  --font-body: "Tajawal", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--char);
+  background: var(--garlic);
+}
+
+h1, h2, h3 { margin: 0; font-weight: 400; }
+h1, h2 { font-family: var(--font-display); line-height: 1.25; }
+p { margin: 0; }
+a { color: inherit; }
+
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.wrap { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
+.narrow { width: min(640px, 100% - 2.5rem); margin-inline: auto; padding-block: 3rem 4rem; }
+
+/* ========== الهيدر ========== */
+.site-header {
+  background: var(--sign);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem 2rem;
+  padding: 1rem clamp(1.25rem, 4vw, 3rem);
+}
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  text-decoration: none;
+  color: var(--chili);
+}
+.site-header nav { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+.site-header nav a {
+  text-decoration: none;
+  font-weight: 700;
+  padding-block: .25rem;
+  border-bottom: 3px solid transparent;
+}
+.site-header nav a:hover { border-bottom-color: var(--char); }
+.site-header nav a[aria-current="page"] { border-bottom-color: var(--chili); }
+
+/* ========== الأزرار ========== */
+.btn {
+  display: inline-block;
+  font: 700 1.0625rem/1 var(--font-body);
+  text-decoration: none;
+  padding: .95rem 1.75rem;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  transition: transform .15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-dark { background: var(--char); color: var(--garlic); }
+.btn-red { background: var(--chili); color: #fff; }
+.btn-sign { background: var(--sign); color: var(--char); }
+
+/* ========== الصفحة الرئيسية: الهيرو ========== */
+.hero {
+  background: var(--sign);
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 4vw, 3rem) clamp(3rem, 7vw, 6rem);
+  overflow: hidden;
+}
+.hero h1 {
+  font-size: clamp(3.25rem, 9vw, 7.5rem);
+  color: var(--chili);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+.hero-text p { max-width: 34ch; font-size: 1.25rem; font-weight: 500; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+
+/* سيخ الشاورما */
+.spit {
+  position: relative;
+  width: min(300px, 70vw);
+  aspect-ratio: 3 / 5;
+  margin-inline: auto;
+}
+.spit::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -8%;
+  bottom: -5%;
+  width: 8px;
+  transform: translateX(-50%);
+  background: var(--char);
+  border-radius: 4px;
+}
+.cone {
+  position: absolute;
+  inset: 2% 0 4%;
+  clip-path: polygon(0 0, 100% 0, 74% 100%, 26% 100%);
+  background:
+    linear-gradient(90deg, rgba(42,25,18,.55), transparent 28%, transparent 72%, rgba(42,25,18,.55)),
+    repeating-linear-gradient(90deg, rgba(255,246,224,.16) 0 7px, transparent 7px 30px),
+    repeating-linear-gradient(180deg, #8A4A24 0 26px, #A9602F 26px 52px, #7A3E1E 52px 74px);
+  background-position: 0 0, 0 0, 0 0;
+  animation: spin 2.4s linear infinite;
+}
+@keyframes spin {
+  to { background-position: 0 0, 30px 0, 0 0; }
+}
+
+/* ========== الأصناف ========== */
+.dishes { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.75rem; }
+.dish { display: flex; gap: 1rem; align-items: flex-start; }
+.dish-icon {
+  flex: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--sign);
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+.dish-icon img { width: 100%; height: 100%; object-fit: cover; }
+.dish-body { flex: 1; min-width: 0; }
+.dish-line { display: flex; align-items: baseline; gap: .6rem; }
+.dish-line h3 { font-size: 1.2rem; font-weight: 700; }
+.leader { flex: 1; border-bottom: 2px dotted var(--ash); transform: translateY(-.35rem); min-width: 1rem; }
+.price { font-weight: 700; color: var(--chili); white-space: nowrap; }
+.dish-body p { color: var(--ash); font-size: .98rem; line-height: 1.6; margin-top: .15rem; }
+
+/* ========== الرئيسية: الأكتر طلبًا + الحجز ========== */
+.popular { padding-block: clamp(3rem, 6vw, 5rem); }
+.popular h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 2rem; }
+.popular .dishes { max-width: 720px; }
+.text-link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-weight: 700;
+  color: var(--chili);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+.reserve {
+  background: var(--chili);
+  color: var(--garlic);
+  padding-block: clamp(3rem, 6vw, 5rem);
+  --focus: var(--garlic);
+}
+.reserve h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: .5rem; }
+.reserve p { margin-bottom: 1.75rem; font-size: 1.15rem; }
+
+/* ========== رأس الصفحات الداخلية ========== */
+.page-head {
+  background: var(--sign);
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 3rem);
+}
+.page-head h1 { font-size: clamp(2.75rem, 8vw, 5rem); color: var(--chili); }
+.page-head p { font-weight: 500; }
+
+/* ========== صفحة المنيو ========== */
+.menu-page { padding-block: 3rem 5rem; display: grid; gap: 3.5rem; }
+.menu-section h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: .5rem;
+  border-bottom: 4px solid var(--sign);
+}
+@media (min-width: 900px) {
+  .menu-section .dishes { grid-template-columns: 1fr 1fr; gap: 1.75rem 3rem; }
+}
+
+/* ========== الفورم ========== */
+.form { display: grid; gap: .4rem; }
+.form label { font-weight: 700; margin-top: .75rem; }
+.form input, .form textarea {
+  width: 100%;
+  font: inherit;
+  padding: .8rem 1rem;
+  background: #fff;
+  color: var(--char);
+  border: 2px solid var(--char);
+  border-radius: 10px;
+}
+.form input:focus, .form textarea:focus { border-color: var(--chili); outline: none; box-shadow: 0 0 0 3px rgba(191,42,29,.25); }
+.form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form .btn { margin-top: 1.5rem; justify-self: start; }
+
+.notice { padding: 1.25rem 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; }
+.notice h2 { font-size: 1.75rem; margin-bottom: .25rem; }
+.notice .btn { margin-top: 1.25rem; }
+.notice-ok { background: var(--sign); }
+.notice-error { background: #fff; border: 2px solid var(--chili); color: var(--chili); font-weight: 700; }
+
+/* ========== التواصل ========== */
+.info { margin: 0 0 2rem; display: grid; gap: .25rem; }
+.info dt { font-weight: 700; color: var(--chili); margin-top: 1rem; }
+.info dd { margin: 0; font-size: 1.15rem; }
+.map-slot {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  border: 3px dashed var(--ash);
+  border-radius: 10px;
+  color: var(--ash);
+}
+
+/* ========== الفوتر ========== */
+.site-footer {
+  background: var(--char);
+  color: var(--garlic);
+  text-align: center;
+  padding: 2.5rem 1.25rem;
+  display: grid;
+  gap: .25rem;
+}
+.footer-brand { font-family: var(--font-display); font-size: 1.75rem; color: var(--sign); }
+
+/* ========== الموبايل ========== */
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; }
+  .spit { width: min(220px, 60vw); }
+  .form .row { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cone { animation: none; }
+  .btn { transition: none; }
+  html { scroll-behavior: auto; }
+}
