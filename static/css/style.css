@@ -1,10 +1,10 @@
 /* ========== الألوان والخطوط ========== */
 :root {
-  --sign: #F4A6C0;
-  --chili: #C2185B;
-  --garlic: #FFF0F5;
-  --char: #4A1F33;
-  --ash: #9C6B83;
+  --sign: #E8B84A;
+  --chili: #BF2A1D;
+  --garlic: #FBF3E4;
+  --char: #2A1912;
+  --ash: #6B5A50;
   --focus: var(--char);
 
   --font-display: "Lalezar", "Tajawal", sans-serif;

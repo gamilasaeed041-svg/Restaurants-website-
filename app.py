@@ -24,7 +24,7 @@ MENU = [
         ],
     },
     {
-        "category": "ركن النجريسكو",
+        "category": "النجريسكو",
         "items": [
             {"name": "نجريسكو فراخ", "desc": "", "price": 125, "icon": "🍗"},
             {"name": "نجريسكو لحمة مفرومة", "desc": "", "price": 125, "icon": "🥩"},
@@ -35,7 +35,7 @@ MENU = [
         ],
     },
     {
-        "category": "ركن الكريب",
+        "category": " الكريب",
         "items": [
             {"name": "كريب شاورما فراخ", "desc": "", "price": 110, "icon": "🌯"},
             {"name": "كريب ميكس فراخ", "desc": "", "price": 110, "icon": "🌯"},
@@ -75,7 +75,7 @@ MENU = [
         ],
     },
     {
-        "category": "ركن البيتزا",
+        "category": "البيتزا",
         "items": [
             {"name": "بيتزا مارجريتا", "desc": "", "price": 120, "icon": "🍕"},
             {"name": "بيتزا سبيشيال", "desc": "", "price": 130, "icon": "🍕"},
@@ -88,7 +88,7 @@ MENU = [
         ],
     },
     {
-        "category": "ركن الوجبات",
+        "category": "الوجبات",
         "items": [
             {"name": "وجبة عربي فراخ", "desc": "", "price": 140, "icon": "🍗"},
             {"name": "وجبة ماريا فراخ", "desc": "", "price": 130, "icon": "🍗"},
@@ -97,7 +97,7 @@ MENU = [
         ],
     },
     {
-        "category": "ركن الساندويتشات",
+        "category": " الساندويتشات",
         "items": [
             {"name": "ساندويتش شاورما فراخ", "desc": "", "price": 100, "icon": "🥙"},
             {"name": "ساندويتش فراخ بطاطس", "desc": "", "price": 110, "icon": "🥙"},
@@ -109,14 +109,14 @@ MENU = [
         ],
     },
     {
-        "category": "ركن الفتة",
+        "category": "الفتة",
         "items": [
             {"name": "فتة فراخ", "desc": "", "price": 130, "icon": "🍗"},
             {"name": "فتة فاهيتا", "desc": "", "price": 130, "icon": "🥩"},
         ],
     },
     {
-        "category": "ركن الفرايز",
+        "category": "الفرايز",
         "items": [
             {"name": "فرايز عادي", "desc": "", "price": 40, "icon": "🍟"},
             {"name": "فرايز جبنة شيدر", "desc": "", "price": 60, "icon": "🍟"},
@@ -124,7 +124,7 @@ MENU = [
         ],
     },
     {
-        "category": "ركن البرجر",
+        "category": "البرجر",
         "items": [
             {"name": "برجر لحمة", "desc": "", "price": 100, "icon": "🍔"},
             {"name": "برجر فراخ", "desc": "", "price": 100, "icon": "🍔"},
@@ -133,7 +133,7 @@ MENU = [
         ],
     },
     {
-        "category": "ركن الحواوشي",
+        "category": "الحواوشي",
         "items": [
             {"name": "حواوشي بلدي", "desc": "", "price": 70, "icon": "🫓"},
             {"name": "حواوشي سوري", "desc": "", "price": 80, "icon": "🫓"},
