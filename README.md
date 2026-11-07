@@ -1,4 +1,3 @@
-https://gamilasaid.pythonanywhere.com
 
 # 🍔 Crunchy Shawarma – Restaurant Website
 
