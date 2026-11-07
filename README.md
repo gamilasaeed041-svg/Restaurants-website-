@@ -19,6 +19,59 @@ This project provides an online restaurant experience where users can explore th
 - Flask
 - HTML5
 - CSS3
+- Jinja2
+
+## 📁 Project Structure
+
+```text
+Restaurants-website/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+├── static/
+│   └── css/
+│
+└── templates/
+    ├── index.html
+    ├── menu.html
+    ├── booking.html
+    └── contact.html
+```
+
+## 🚀 Installation & Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/gamilasaeed041-svg/Restaurants-website-.git
+```
+
+2. Navigate to the project folder:
+
+```bash
+cd Restaurants-website-
+```
+
+3. Install Flask:
+
+```bash
+pip install Flask
+```
+
+4. Run the application:
+
+```bash
+python app.py
+```
+
+5. Open your browser and visit:
+
+```text
+http://127.0.0.1:5000
+```
+
 ## 🌐 Live Demo
 
 [Crunchy Shawarma – Live Website](https://gamilasaid.pythonanywhere.com)
@@ -32,4 +85,3 @@ Information Systems Student | Aspiring Web Developer
 ---
 
 ⭐ If you find this project interesting, feel free to explore the repository!
-
