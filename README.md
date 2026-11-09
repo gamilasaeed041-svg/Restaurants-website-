@@ -72,9 +72,6 @@ python app.py
 http://127.0.0.1:5000
 ```
 
-## 🌐 Live Demo
-
-[Crunchy Shawarma – Live Website](https://gamilasaid.pythonanywhere.com)
 
 ## 👩‍💻 Developer
 
